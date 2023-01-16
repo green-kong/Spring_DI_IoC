@@ -4,21 +4,22 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import hello.springbasic.AppConfig;
 import hello.springbasic.member.Grade;
 import hello.springbasic.member.Member;
 import hello.springbasic.member.MemberService;
 import hello.springbasic.member.MemberServiceImpl;
 
 class OrderServiceImplTest {
-    MemberService memberService = new MemberServiceImpl();
-    OrderService orderService = new OrderServiceImpl();
+    MemberService memberService;
+    OrderService orderService;
 
-//    @BeforeEach
-//    public void beforeEach() {
-//        AppConfig appConfig = new AppConfig();
-//        memberService = appConfig.memberService();
-//        orderService = appConfig.orderService();
-//    }
+    @BeforeEach
+    public void beforeEach() {
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+        orderService = appConfig.orderService();
+    }
 
 
     @Test

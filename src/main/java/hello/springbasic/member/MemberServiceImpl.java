@@ -4,8 +4,8 @@ public class MemberServiceImpl implements MemberService{
 
     private final MemberRepository memberRepository;
 
-    public MemberServiceImpl() {
-        this.memberRepository = new MemoryMemberRepository();
+    public MemberServiceImpl(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
     }
 
     @Override
