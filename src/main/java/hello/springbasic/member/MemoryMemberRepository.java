@@ -3,6 +3,9 @@ package hello.springbasic.member;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class MemoryMemberRepository implements MemberRepository {
 
 //    동시성 이슈가 발생할 수 있기에, 실무에서는 ConCurrentHashMap 을 사용한다.

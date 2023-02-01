@@ -1,12 +1,14 @@
 package hello.springbasic.discount;
 
+import org.springframework.stereotype.Component;
+
 import hello.springbasic.member.Grade;
 import hello.springbasic.member.Member;
 
+@Component
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private int discountPercent = 10;
-
 
     @Override
     public int discount(Member member, int price) {
